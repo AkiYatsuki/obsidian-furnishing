@@ -1,0 +1,56 @@
+/* === Multi-Column Callout Vertical Dividers ===
+ *  Add vertical borders between columns in [!multi-column] callouts.
+ *  Uses the same CSS variables defined in MCL Multi Column.css:
+ *    --col-rule-width  (default: 1px)
+ *    --col-rule-color  (default: var(--background-modifier-border))
+ *  Customize via Style Settings → MCL Multi Column, or override in your own CSS.
+ */
+
+/* --- Flex-based multi-column (default) --- */
+
+/* Cancel horizontal gap — spacing is handled by padding below */
+div[data-callout="multi-column"].callout {
+    column-gap: 0;
+}
+
+/* Equal horizontal breathing room on each child */
+div[data-callout="multi-column"].callout > .callout-content > * {
+    padding-left: calc(var(--callout-gap) / 2);
+    padding-right: calc(var(--callout-gap) / 2);
+}
+div[data-callout="multi-column"].callout > .callout-content > :first-child {
+    padding-left: 0;
+}
+div[data-callout="multi-column"].callout > .callout-content > :last-child {
+    padding-right: 0;
+}
+
+/* The divider sits between columns, visually centered */
+div[data-callout="multi-column"].callout > .callout-content > :not(:last-child) {
+    border-right: var(--col-rule-width) solid var(--col-rule-color);
+}
+
+/* --- Grid-based col3 variant --- */
+
+div[data-callout="multi-column"][data-callout-metadata*="col3"]:not([data-callout-metadata*="icons"]).callout {
+    column-gap: 0;
+}
+
+div[data-callout="multi-column"][data-callout-metadata*="col3"]:not([data-callout-metadata*="icons"]).callout
+    > .callout-content > * {
+    padding-left: calc(var(--callout-gap) / 2);
+    padding-right: calc(var(--callout-gap) / 2);
+}
+div[data-callout="multi-column"][data-callout-metadata*="col3"]:not([data-callout-metadata*="icons"]).callout
+    > .callout-content > :first-child {
+    padding-left: 0;
+}
+div[data-callout="multi-column"][data-callout-metadata*="col3"]:not([data-callout-metadata*="icons"]).callout
+    > .callout-content > :nth-child(3n) {
+    padding-right: 0;
+}
+
+div[data-callout="multi-column"][data-callout-metadata*="col3"]:not([data-callout-metadata*="icons"]).callout
+    > .callout-content > :not(:nth-child(3n)) {
+    border-right: var(--col-rule-width) solid var(--col-rule-color);
+}

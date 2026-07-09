@@ -1,0 +1,74 @@
+.my-custom-button {
+    background: linear-gradient(45deg, #ff66ff, #4ecdcd);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.forge {
+    background: linear-gradient(90deg, #ea77ee, #8855ee);
+    color: #ff88cc;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.forge:hover {
+    transform: translateY(-2px) scale(1.1, 1.1);
+}
+
+.intellect {
+    background: linear-gradient(90deg, #66aaee, #9a79fe);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.intellect:hover {
+    transform: translateY(-2px) scale(1.1, 1.1);
+}
+
+.notion {
+    background: linear-gradient(90deg, #bbbbbb, #222222);
+    color: #000000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    vertical-align: middle;
+}
+.notion:hover {
+    transform: translateY(-2px) scale(1.1, 1.1);
+}
+
+.notion::before {
+    content: "";
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+    background: url("https://img.icons8.com/?size=100&id=F6H2fsqXKBwH&format=png&color=000000") no-repeat center/contain;
+}
+
+.daily {
+    background: var(--interactive-accent) !important;
+    color: #000000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.daily:hover {
+    transform: translateY(-2px) scale(1.1, 1.1);
+}

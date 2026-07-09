@@ -1,0 +1,8 @@
+.markdown-embed .metadata-container,
+.markdown-embed-content .metadata-container {
+    display: none !important;
+}
+
+.day.has-note.svelte-q3wqg9 {
+    background-color: [accent-color];
+}

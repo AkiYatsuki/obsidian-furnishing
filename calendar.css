@@ -1,0 +1,15 @@
+#calendar-container .title {
+    font-family: "Brush Script MT";
+    font-size: 1.8em;
+}
+
+#calendar-container .day.has-note {
+    background-color: color-mix(
+        in srgb,
+        var(--interactive-accent) 35%,
+        transparent
+    );
+}
+#calendar-container .day.active {
+    background-color: var(--interactive-accent);
+}

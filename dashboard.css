@@ -1,0 +1,87 @@
+.dashboard .metadata-container {
+    display: none !important;
+}
+.dashboard .inline-title {
+    font-family: "Brush Script MT";
+    font-size: 1.5em;
+}
+/* ==== 名叫embed的callout，作用是在multi-column环境中渲染没有背景的文字 ====*/
+.callout[data-callout="embed"] {
+    background: none;
+}
+
+.callout[data-callout="embed"] .callout-title {
+    display: none !important;
+}
+
+/* ==== bases组块 ==== */
+.bases-embed .bases-header {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        opacity 0.3s ease,
+        max-height 0.3s ease;
+}
+
+.bases-embed .bases-header:hover {
+    opacity: 1;
+    max-height: 40px;
+}
+/* ==== 隐藏Properties，但似乎没办法hover于是弃置了 ==== */
+/*
+.bases-embed .bases-cards-property {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        opacity 0.3s ease,
+        max-height 0.3s ease;
+}
+*/
+
+/* ===== Bases 现代样式 - CSS 变量控制版 ===== */
+
+:root {
+    /* 圆角大小 */
+    --bases-radius-sm: 6px;
+    --bases-radius-md: 12px;
+    --bases-radius-lg: 16px;
+    --bases-radius-xl: 24px;
+    --bases-radius-full: 9999px;
+
+    /* 阴影层级 */
+    --bases-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --bases-shadow-md:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --bases-shadow-lg:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --bases-shadow-xl:
+        0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+    /* 颜色（自动适配主题） */
+    --bases-surface: var(--background-primary);
+    --bases-surface-elevated: var(--background-secondary);
+    --bases-border: var(--background-modifier-border);
+    --bases-border-hover: var(--background-modifier-border-hover);
+    --bases-accent: var(--color-accent);
+}
+
+/* ===== Table View ===== */
+.bases-view[data-view-type="table"] .bases-table {
+    border-radius: var(--bases-radius-sm);
+    box-shadow: var(--bases-shadow-md);
+    overflow: hidden;
+}
+
+/* ===== Card View ===== */
+.bases-view[data-view-type="cards"] .bases-cards-item {
+    border-radius: var(--bases-radius-md);
+    box-shadow: var(--bases-shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bases-view[data-view-type="cards"] .bases-cards-item:hover {
+    box-shadow: var(--bases-shadow-xl);
+    transform: translateY(-4px) scale(1.01);
+}

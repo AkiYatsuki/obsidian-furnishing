@@ -72,3 +72,30 @@
 .daily:hover {
     transform: translateY(-2px) scale(1.1, 1.1);
 }
+
+.new {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    border: 2px solid var(--interactive-accent);
+    background: transparent;
+    color: var(--interactive-accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    vertical-align: middle;
+    background-       color: color-mix(in srgb, var(--interactive-accent) 35%, transparent);
+}
+.new::after {
+    content: "+";
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--interactive-accent);
+    line-height: 1;
+}
+.new:hover {
+    transform: scale(1.15);
+}

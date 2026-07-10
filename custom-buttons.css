@@ -73,12 +73,12 @@
     transform: translateY(-2px) scale(1.1, 1.1);
 }
 
+/* ====== This will be depricated I think ===== */
 .new {
     width: 2.5em;
     height: 2.5em;
     border-radius: 50%;
-    border: 2px solid var(--interactive-accent);
-    background: transparent;
+    border: 2.5px solid var(--interactive-accent);
     color: var(--interactive-accent);
     display: inline-flex;
     align-items: center;
@@ -87,7 +87,7 @@
     transition: transform 0.3s ease;
     cursor: pointer;
     vertical-align: middle;
-    background-       color: color-mix(in srgb, var(--interactive-accent) 35%, transparent);
+    background-color: color-mix(in srgb, var(--interactive-accent) 15%, transparent);
 }
 .new::after {
     content: "+";
